@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+    
+        <!------------------------------Navigation ------------------------------------------->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container">
+                <a class="navbar-brand logo-text page-scroll" href="#">EventX</a>
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="Home.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll active" href="Events.html">EVENTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="Gallery.html">GALLERY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="Contact.html">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="Contact.html">ABOUT</a>
+                        </li>
+                    </ul>
+                    <span class="nav-item">
+                        <a class="btn-outline-sm page-scroll" href="login.blade.php">ACCOUNT</a>
+                    </span>
+                </div>
+            </div> 
+        </nav>
+
+
+        <div class="wrapper">
+            <h2><br>
+          Services</h2>
+          <div class="line">
+          </div>
+          <div class="single-service">
+                <div class="social">
+          <i class="fa fa-codepen"></i></div>
+          <span></span>
+                 <h3>
+          Event Designing</h3>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et delectus, in veritatis veniam non praesentium corporis dolorum necessitatibus. Culpa odio enim amet praesentium illo voluptates ab quidem, nam consequuntur. Natus.</p>
+          </div>
+          <div class="single-service">
+                <div class="social">
+          <i class="fa fa-cogs"></i></div>
+          <span></span>
+                 <h3>
+          Event Management</h3>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et delectus, in veritatis veniam non praesentium corporis dolorum necessitatibus. Culpa odio enim amet praesentium illo voluptates ab quidem, nam consequuntur. Natus.</p>
+          </div>
+          <div class="single-service">
+                <div class="social">
+          <i class="fa fa-diamond"></i></div>
+          <span></span>
+                 <h3>
+          Decore & Design</h3>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et delectus, in veritatis veniam non praesentium corporis dolorum necessitatibus. Culpa odio enim amet praesentium illo voluptates ab quidem, nam consequuntur. Natus.</p>
+          </div>
+          </div>
+          
+</body>
+<style>
+    .wrapper{
+    height: 90vh;
+    font-family: poppins;
+}
+.wrapper{
+    width: 1170px;
+    margin: 5% auto;
+}
+.wrapper h2{
+    text-transform: uppercase;
+    font-family: poppins;
+    font-weight: bold;
+    text-align: center;
+    font-size: 60px;
+    color:#333;
+    margin: 0;
+}
+.single-service {
+position: relative;
+width: 31%;
+height: 320px;
+background: #fff;
+box-sizing: border-box;
+padding: 0 15px;
+transition: .5s;
+overflow: hidden;
+float: left;
+margin: 0 10px;
+text-align: center;
+}
+.line {
+width: 150px;
+height: 3px;
+background: #fff;
+margin: 0 auto 60px auto;
+}
+.single-service p{            
+    color: #262626;
+    font-size: 14px;
+}
+.single-service h3 {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: poppins;
+    letter-spacing: 1px;
+    color: #262626;
+}
+.social {
+width: 60px;
+height: 60px;
+background: #262626;
+border-radius: 50%;
+margin: 5% auto;
+}
+.social i {
+font-size: 30px;
+padding: 15px;
+    color: #fff;
+}
+.single-service:hover{
+    box-shadow: 0 30px 35px rgba(0,0,0,0.7);
+}
+.single-service span {
+position: absolute;
+top: 0;
+left: -110%;
+width: 100%;
+height: 100%;
+background: #3bba9c75;
+transition: .7s;
+transform: skewX(10deg);
+}
+.single-service:hover span{
+    left: 110%;
+}
+
+@media (max-width:1000px){
+    .wrapper {
+width: 100%;
+}
+.single-service {
+width: 95%;
+margin-bottom: 30px;
+}
+.wrapper h2 {
+font-size: 30px;
+}
+}
+
+</style>
+<footer>
+    <div class="footercontainer">
+      <div class="side">
+      <ul>
+      <li id="mainheading">How can we Help?</li>
+      <li><a href="#DP Cares">DP Cares</a></li>
+      <li><a href="#Contact us">Contact us</a></li>
+      <li><a href="#Store Locations">Store Locations</a></li>
+      <li><a href="#Fashion Shows">Fashion Shows</a></li>
+      </ul>
+      </div>
+      <div class="side">
+      <ul>
+      <li id="mainheading">Customer Service</li>
+      <li><a href="#Ordering & Tracking">Ordering & Tracking</a></li>
+      <li><a href="#Terms & Conditions">Terms & Conditions</a></li>
+      <li><a href="#Privacy Policy">Privacy Policy</a></li>
+      <li><a href="#Shipping Policy">Shipping Policy</a></li>
+      </ul>
+      </div>
+      <div class="side">
+      <ul>
+      <li id="mainheading">Follow us</li>
+      <li><a href="#Facebook"><span class="fa fa-facebook"></span> Facebook</a></li>
+      <li><a href="#Twitter"><span class="fa fa-twitter"></span> Twittwer</a></li>
+      <li><a href="#Instagram"><span class="fa fa-instagram"></span> Instagram</a></li>
+      <li><a href="#Instagram"><span class="fa fa-snapchat-ghost"></span> Snapchat</a></li>
+      </ul>
+      </div>
+      <div class="side">
+      <center>
+      <ul>
+      <li id="mainheading">NewsLetter</li>
+      <li><input type="email" id="email" placeholder="Enter Your Email Here..."required></li>
+      <li><input class="submitnewsletter" type="submit" id="submit" value="SUBSCRIBE"></li>
+      <br><br>
+      </ul>
+      </center>
+      </div>
+      </div>
+    </footer>
+</html>

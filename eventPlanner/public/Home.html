@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTX</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!--====================================== NavBar =======================================-->
+    <nav class="navbar">
+        <ul class="navbar-nav">
+          <li class="logo">
+            <a href="Home.html" class="nav-link">
+              <span class="link-text logo-text">EVENTX</span>
+              <i class="fa fa-meetup"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="Home.html" class="nav-link">
+              <span class="link-text">HOME</span>
+              <i class="fa fa-home"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+          <a href="Events.html" class="nav-link">
+            <span class="link-text">EVENTS</span>
+            <i class="fa fa-calendar"></i>
+          </a>
+      </li>
+      <li class="nav-item">
+        <a href="Gallery.html" class="nav-link">
+          <span class="link-text">GALLERY</span>
+          <i class="fa fa-image"></i>
+        </a>
+    </li>
+    <li class="nav-item">
+      <a href="About.html" class="nav-link">
+        <span class="link-text">ABOUT US</span>
+        <i class="fa fa-address-book-o"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="Contact.html" class="nav-link">
+        <span class="link-text">CONTACT US</span>
+        <i class="fa fa-phone-square"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+        <!--<span class="link-text">ACCOUNT</span>-->
+        <button class='accountbtn' onclick="document.getElementById('login-form').style.display='block'"style="width=auto;">ACCOUNT</button>
+        <i class="fa fa-user"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="link-text">SEARCH</span>
+              <i class="fa fa-search"></i>
+            </a>
+        </li>
+    
+        </ul>
+      </nav>
+         <!--====================================== Login-form =======================================-->
+                <div id="login-form" class="login-page">
+                  <div class="form-box">
+                    <div class="button-box">
+                      <div id="btn"></div>
+                      <button type='button' onclick="login()" class="toggle-btn">Login</button>
+                      <button type="button" onclick="register()" class="toggle-btn">Register</button>
+                    </div>
+                    <form id="login" class="input-group-login">
+                      <input type="email" class="input-feild" placeholder="Email ID" required>
+                      <input type="password" class="input-feild" placeholder="Enter Password" required>
+                      <input type="checkbox" class="check-box"><span class="form-text">Remember Password</span>
+                      <button type="submit" class="submit-btn">Log in</button>
+                    </form>
+                    <form id="register" class="input-group-register">
+                      <input type="text" class="input-feild" placeholder="First Name" required>
+                      <input type="text" class="input-feild" placeholder="Last Name" required>
+                      <input type="email" class="input-feild" placeholder="Email ID" required>
+                      <input type="password" class="input-feild" placeholder="Enter Password" required>
+                      <input type="password" class="input-feild" placeholder="Confirm Password" required>
+                      <input type="checkbox" class="check-box">
+                      <span class="form-text">I agree to all terms and conditions</span>
+                      <button type="submit" class="submit-btn">Log in</button>
+                    </form>
+                  </div>
+                </div>
+      <script>
+          var x=document.getElementById('login');
+          var y=document.getElementById('register');
+          var z=document.getElementById('btn');
+          function register()
+          {
+              x.style.left="-400px";
+              y.style.left="50px";
+              z.style.left="1100px";
+
+          }
+          function login()
+          {
+              x.style.left="50px";
+              y.style.left="450px";
+              z.style.left="0px"; 
+          }
+      </script>
+      <script>
+          var modal =document.getElementById('login-form');
+          window.onclick = function(event)
+          {
+              if (event.target == modal)
+              {
+                  modal.style.display=none;
+              }
+          }
+
+      </script>
+      <script>
+                  var modal1 =document.getElementById('register');
+                  window.onclick = function(event)
+                  {
+                      if (event.target == modal)
+                      {
+                          modal1.style.display=none;
+                      }
+                  }
+      
+      </script>
+
+          <!--====================================== Main =======================================-->
+    
+      <main>
+        	<!--====================================== Slider =======================================-->
+	<div class="slider">
+    <div class="coverSlider fade">
+  <img id = "ig" src="images/cover4.jpg" style="width:1280px; height:650px;">
+  <div class="caption">Magical Moments<br><br>UNIQUE & CREATIVE</div>
+</div>
+    <div class="coverSlider fade">
+  <img id = "ig" src="images/cover3.jpg" style="width:1280px; height:650px;">
+  <div class="caption">Magical Moments<br><br>UNIQUE & CREATIVE</div>
+</div>
+    <div class="coverSlider fade">
+  <img id = "ig" src="images/cover1.jpg" style="width:1280px; height:650px;">
+  <div class="caption">Magical Moments<br><br>UNIQUE & CREATIVE</div>
+  </div>
+</div>
+<script>
+var slideIndex=0;
+slideShow();
+function slideShow()
+{
+var i;
+var slider = document.getElementsByClassName("coverSlider");
+for(i=0;i<slider.length;i++)
+{
+slider[i].style.display="none";
+}
+slideIndex++;
+if (slideIndex > slider.length) 
+{
+slideIndex = 1
+}
+slider[slideIndex-1].style.display = "block";  
+setTimeout(slideShow, 1000);
+}
+</script>
+ 	<!--====================================== Gallery =======================================-->
+  <div>
+    <h1 class="h">GALLERY</h1>
+    <div class="gallery">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/bimg6.jpg" alt="Avatar" style="width:340px;height:340px;">
+          </div>
+          <div class="flip-card-back">
+            <img src="images/bbimg6.jpg" alt="Avatar" style="width:340px;height:340px;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/bimg2.jpg" alt="Avatar" style="width:340px;height:340px;">
+          </div>
+          <div class="flip-card-back">
+            <img src="images/bbimg2.jpg" alt="Avatar" style="width:340px;height:340px;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/bimg3.jpg" alt="Avatar" style="width:340px;height:340px;">
+          </div>
+          <div class="flip-card-back">
+            <img src="images/bbimg3.jpeg" alt="Avatar" style="width:340px;height:340px;">
+          </div>
+        </div>
+      </div>
+    </div> 
+    <button class="button">VIEW MORE PHOTOS</button>
+  </div>  
+ 	<!--====================================== Blog Gallery =======================================-->
+<div class="blog">
+  <h1 class="h1"> OUR BLOG </h1>
+  <h6 class="h6">Featured Blog Posts</h6>
+  <div class="blogGallery">
+    <img src = "images/blogimg2.jpeg" style="width:240px; height:200px">
+    <div class="blogDescription">
+      <p class="text1">Festive + Fun Virtual Holiday Party Ideas!?</p>
+      <p class="text2">by Asma Iftikhar | Aug 7, 2021</p>
+      <p class="text3">If your team is working across the country, or not quite ready to party together in person, consider these three super festive and engaging ways to celebrate virtually together. Virtual events can seem daunting to plan, but consider...</p></div>
+  </div>
+  <div class="blogGallery">
+      <img src = "images/blogimg1.jpeg" style="width:240px; height:200px">
+      <div class="blogDescription">
+        <p class="text1">When it Comes to Making Decisions About Your Next Event, Keep Calm and….Read On.</p>
+      <p class="text2">by Asma Iftikhar | Mar 12, 2021</p> 
+       <p class="text3">Here we are a year into the Pandemic and have the same event-related questions – do you move forward with the in-person event that has...</p> </div>
+  </div>
+  <div class="blogGallery">
+    <img src = "images/img11.jpg" style="width:240px; height:200px">
+    <div class="blogDescription">
+      <p class="text1">COVID-19 and Your Event: Can it be Rescheduled?</p>
+      <p class="text2">by Asma Iftikhar | Jun 16, 2020</p>
+      <p class="text3">Rescheduling your event will take extra consideration during these uncertain times where our new “normal” is not yet clearly defined. At this point, you have hopefully considered all of your options; and have determined if your event...</p></div>
+  </div>
+</div>
+ <!--===================================== Footer =======================================-->
+
+</main>
+</body>
+<footer>
+  <div class="container">
+    <div class="side">
+    <ul>
+    <li id="mainheading">How can we Help?</li>
+    <li><a href="#DP Cares">DP Cares</a></li>
+    <li><a href="#Contact us">Contact us</a></li>
+    <li><a href="#Store Locations">Store Locations</a></li>
+    <li><a href="#Fashion Shows">Fashion Shows</a></li>
+    </ul>
+    </div>
+    <div class="side">
+    <ul>
+    <li id="mainheading">Customer Service</li>
+    <li><a href="#Ordering & Tracking">Ordering & Tracking</a></li>
+    <li><a href="#Terms & Conditions">Terms & Conditions</a></li>
+    <li><a href="#Privacy Policy">Privacy Policy</a></li>
+    <li><a href="#Shipping Policy">Shipping Policy</a></li>
+    </ul>
+    </div>
+    <div class="side">
+    <ul>
+    <li id="mainheading">Follow us</li>
+    <li><a href="#Facebook"><span class="fa fa-facebook"></span> Facebook</a></li>
+    <li><a href="#Twitter"><span class="fa fa-twitter"></span> Twittwer</a></li>
+    <li><a href="#Instagram"><span class="fa fa-instagram"></span> Instagram</a></li>
+    <li><a href="#Instagram"><span class="fa fa-snapchat-ghost"></span> Snapchat</a></li>
+    </ul>
+    </div>
+    <div class="side">
+    <center>
+    <ul>
+    <li id="mainheading">NewsLetter</li>
+    <li><input type="email" id="email" placeholder="Enter Your Email Here..."required></li>
+    <li><input class="submitnewsletter" type="submit" id="submit" value="SUBSCRIBE"></li>
+    <br><br>
+    </ul>
+    </center>
+    </div>
+    </div>
+  </footer>
+</html>
